@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private bool jumping = false;
 
     private MeshRenderer _mesh;
+
     //private bool _held = false;
 
     void Start()
@@ -24,17 +25,24 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
+
+
+        Vector3 targetPos = Input.mousePosition;
+        targetPos.z = 10;
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(targetPos);
+        //Rotate Player Towards the Mouse
+        
+
         if(Input.GetMouseButton(0) && !(jumping)){
             jumping = true;
-            Jump();
+            
+            Jump(targetPos, worldPos);
         }
                    
 
     }
-    public void Jump(){
-        Vector3 targetPos = Input.mousePosition;
-        targetPos.z = 10;
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(targetPos);
+    public void Jump(Vector3 targetPos, Vector3 worldPos){
+
 
 
         _direction = (worldPos - transform.position).normalized;
