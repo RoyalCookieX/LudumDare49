@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class Koda : MonoBehaviour
 {
+    public List<GameObject> _spawnPoints;
+    public List<GameObject> _spawnObjects;
+
     public GameObject spawner;
     public bool stopSpawn = false;
     public float spawnTime;
-    public float spawnDelay;
-    // Start is called before the first frame update
+
     void Start()
     {
-        InvokeRepeating("SpawnObject", spawnTime, spawnDelay);
+        StartCoroutine(SpawnObject());
     }
-    public void SpawnObject()
+    public IEnumerator SpawnObject()
     {
-        Instantiate(spawner, transform.position, transform.rotation);
+
+        GameObject spawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Count)];
+        GameObject spawnObject = _spawnObjects[Random.Range(0, _spawnObjects.Count)];
+        Instantiate(spawnObject, spawnPoint.transform.position, spawnPoint.transform.rotation);
+
+        yield return new WaitForSeconds(spawnTime);
         if (stopSpawn)
         {
             //Stop spawning
-            CancelInvoke("SpawnObject");
+        }
+        else
+        {
+            StartCoroutine(SpawnObject());
         }
     }
 }
