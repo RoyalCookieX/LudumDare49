@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Koda2 : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     public List<GameObject> _spawnObjects;
-
-    public bool stopSpawn = false;
-    public float spawnTime;
     public GameObject player;
+    public bool stopSpawn = false;
+
+    public float spawnTime;
+    public float minTime = 1;
+    public float maxTime = 10;
 
     void Start()
     {
@@ -18,7 +20,7 @@ public class Koda2 : MonoBehaviour
     {
         //player = GameObject.Find("Player");
 
-        spawnTime = Random.Range(1, 10);
+        spawnTime = Random.Range(minTime, maxTime);
         GameObject spawnObject = _spawnObjects[Random.Range(0, _spawnObjects.Count)];
         
 
