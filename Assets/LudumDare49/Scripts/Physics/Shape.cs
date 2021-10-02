@@ -29,6 +29,7 @@ public class Shape : MonoBehaviour
             StartCoroutine(DestroyRoutine());
     }
     
+
     public void HoldObject(Rigidbody rb)
     {
         _heldBody = rb;
