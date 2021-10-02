@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {  
-    private Rigidbody2D _rb;
+    private Rigidbody _rb;
     private Vector2 _direction;
     /*[SerializedField]*/private float _moveSpeed = 15f;
     /*[SerializedField]*/private float _maxVelocity = 10;
@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        _rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
 
             _direction = (worldPos - transform.position).normalized;
-            _rb.AddForce(_direction * _moveSpeed, ForceMode2D.Impulse);
+            _rb.AddForce(_direction * _moveSpeed, ForceMode.Impulse);
             _rb.velocity = Vector3.ClampMagnitude(_rb.velocity, _maxVelocity);
 
         }
