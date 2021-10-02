@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rb;
     private Vector2 _direction;
     /*[SerializedField]*/private float _moveSpeed = 15f;
-    /*[SerializedField]*/private float _maxVelocity = 10;
+    /*[SerializedField]*/private float _maxVelocity = 10f;
 
     private bool _jumping = false;
 
