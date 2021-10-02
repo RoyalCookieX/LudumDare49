@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     public float spawnTime;
     public float minTime = 1;
     public float maxTime = 10;
+    public int range = 10;
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class Spawner : MonoBehaviour
         GameObject spawnObject = _spawnObjects[Random.Range(0, _spawnObjects.Count)];
         
 
-        if ((player.transform.position - this.transform.position).sqrMagnitude < 10 * 10)
+        if ((player.transform.position - this.transform.position).sqrMagnitude < range * range)
         {
             stopSpawn = true;
         }
