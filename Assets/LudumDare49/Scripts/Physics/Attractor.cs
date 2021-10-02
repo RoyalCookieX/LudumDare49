@@ -29,7 +29,7 @@ public class Attractor : MonoBehaviour
             Rigidbody rb = col.attachedRigidbody;
             if(rb == null) continue;
 
-            Vector2 dir = (transform.position - rb.transform.position).normalized;
+            Vector3 dir = (transform.position - rb.transform.position).normalized;
             rb.AddForce(dir * _attractionMultiplier);
         }
     }
