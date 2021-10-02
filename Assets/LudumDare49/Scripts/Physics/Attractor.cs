@@ -10,16 +10,23 @@ public class Attractor : MonoBehaviour
     [BoxGroup("Properties"), Min(1), SerializeField] private int _maxRigidbodies = 20;
     [BoxGroup("Properties"), SerializeField] private LayerMask _attractorMask;
 
-    private RaycastHit2D[] _raycastHitData;
+    private Collider[] _colliderData;
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.transform.CompareTag("Shape"))
+            Destroy(other.gameObject);
+    }
 
     private void FixedUpdate()
     {
-        _raycastHitData = new RaycastHit2D[_maxRigidbodies];
-        Physics2D.CircleCastNonAlloc(transform.position, _attractRadius, Vector2.up, _raycastHitData, 0f, _attractorMask);
+        _colliderData = new Collider[_maxRigidbodies];
+        Physics.OverlapSphereNonAlloc(transform.position, _attractRadius, _colliderData, _attractorMask);
         
-        foreach(RaycastHit2D info in _raycastHitData)
+        foreach(Collider col in _colliderData)
         {
-            Rigidbody2D rb = info.rigidbody;
+            if(col == null) continue;
+            Rigidbody rb = col.attachedRigidbody;
             if(rb == null) continue;
 
             Vector2 dir = (transform.position - rb.transform.position).normalized;
