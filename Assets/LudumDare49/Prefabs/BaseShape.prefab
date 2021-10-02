@@ -47,9 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ffac5229675cfb4d867729bab0a2aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 10
-  _rngMultiplierRange: {x: -5, y: 5}
-  _maxLifetime: 50
+  _moveSpeed: 20
+  _rngMultiplierRange: {x: 0, y: 3}
+  _maxLifetime: -1
+  _releaseOffset: 1
   _rigidbody: {fileID: 8233609293061413969}
 --- !u!54 &8233609293061413969
 Rigidbody:
