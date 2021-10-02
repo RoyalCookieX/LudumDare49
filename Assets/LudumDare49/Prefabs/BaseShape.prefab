@@ -50,7 +50,7 @@ MonoBehaviour:
   _moveSpeed: 20
   _rngMultiplierRange: {x: 0, y: 3}
   _maxLifetime: -1
-  _releaseOffset: 1
+  _releaseOffset: 3
   _rigidbody: {fileID: 8233609293061413969}
 --- !u!54 &8233609293061413969
 Rigidbody:

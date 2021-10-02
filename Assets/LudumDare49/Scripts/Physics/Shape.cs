@@ -14,8 +14,8 @@ public class Shape : MonoBehaviour
     
     [BoxGroup("Components"), SerializeField] private Rigidbody _rigidbody;
 
-    private Rigidbody _heldBody;
-    
+    private PlayerMovement _playerMovement;
+
     private void Start()
     {
         Vector2 startDir = Random.insideUnitCircle.normalized;
@@ -30,19 +30,22 @@ public class Shape : MonoBehaviour
     }
     
 
-    public void HoldObject(Rigidbody rb)
+    public void HoldObject(PlayerMovement player)
     {
-        _heldBody = rb;
-        _heldBody.gameObject.SetActive(false);
-        _heldBody.isKinematic = true;
+        _playerMovement = player;
+        _playerMovement.Hide();
     }
 
-    public void ReleaseObject(Vector2 releaseDir, float force)
+    public void ReleaseObject()
     {
-        _heldBody.isKinematic = false;
-        _heldBody.gameObject.SetActive(true);
-        _heldBody.MovePosition(transform.position + (Vector3)releaseDir * _releaseOffset);
-        _heldBody.AddForce(releaseDir * force, ForceMode.Impulse);
+        Vector3 targetPos = Input.mousePosition;
+        targetPos.z = 10;
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(targetPos);
+
+        Vector2 throwDir = (worldPos - transform.position).normalized;
+
+        _playerMovement.Throw(this.transform.position, throwDir, _releaseOffset);
+        _playerMovement = null;
     }
 
     private IEnumerator DestroyRoutine()
@@ -50,4 +53,31 @@ public class Shape : MonoBehaviour
         yield return new WaitForSeconds(_maxLifetime);
         Destroy(gameObject);
     }
+
+
+    //Collision With Player
+
+    private void OnCollisionEnter(Collision other){
+        if(other.transform.CompareTag("Player")){
+            Debug.Log("Hit Shape");
+            
+            if(other.transform.TryGetComponent(out PlayerMovement playerMovement)){
+                HoldObject(playerMovement);
+            }
+        }
+
+    }
+
+    void Update(){
+
+        if(!(_playerMovement == null) && Input.GetMouseButtonDown(0)){
+            ReleaseObject();
+
+        }
+    }
+
+
+
+
+
 }
