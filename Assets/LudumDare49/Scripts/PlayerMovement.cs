@@ -10,21 +10,19 @@ public class PlayerMovement : MonoBehaviour
     
     private Rigidbody _rb;
     private Vector2 _direction;
-    private float _moveSpeed = 10f;
-    private float _maxVelocity = 10f;
+    [SerializeField] private float _moveSpeed = 10f;
+    [SerializeField] private float _maxVelocity = 10f;
 
     private bool jumping = false;
 
-    private MeshRenderer _mesh;
-    private Collider _collider;
+    [SerializeField] private MeshRenderer _mesh;
+    [SerializeField] private Collider _collider;
 
     //private bool _held = false;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
-        _mesh = GetComponent<MeshRenderer>();
-        _collider = GetComponent<Collider>();
     }
 
     void Update()
