@@ -8,7 +8,6 @@ public class Spawner : MonoBehaviour
     public GameObject player;
     public bool stopSpawn = false;
 
-    public float spawnTime;
     public float minTime = 1;
     public float maxTime = 10;
     public int range = 10;
@@ -19,7 +18,7 @@ public class Spawner : MonoBehaviour
     }
     public IEnumerator SpawnObject()
     {
-        //player = GameObject.Find("Player");
+        float spawnTime;
 
         spawnTime = Random.Range(minTime, maxTime);
         GameObject spawnObject = _spawnObjects[Random.Range(0, _spawnObjects.Count)];
