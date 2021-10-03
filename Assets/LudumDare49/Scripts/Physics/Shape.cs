@@ -15,6 +15,7 @@ public class Shape : MonoBehaviour
     [BoxGroup("Components"), SerializeField] private Rigidbody _rigidbody;
 
     private PlayerMovement _playerMovement;
+    private PlayerScore _playerScore;
     private Camera _mainCamera;
 
     private void Start()
@@ -32,11 +33,12 @@ public class Shape : MonoBehaviour
             StartCoroutine(DestroyRoutine());
     }
     
-
     public void HoldObject(PlayerMovement player)
     {
         _playerMovement = player;
         _playerMovement.Hide();
+
+        player.TryGetComponent(out _playerScore);
     }
 
     public void ReleaseObject()
@@ -49,6 +51,8 @@ public class Shape : MonoBehaviour
 
         _playerMovement.Throw(this.transform.position, throwDir, _releaseOffset);
         _playerMovement = null;
+
+        _playerScore = null;
     }
 
     private IEnumerator DestroyRoutine()
@@ -56,10 +60,8 @@ public class Shape : MonoBehaviour
         yield return new WaitForSeconds(_maxLifetime);
         Destroy(gameObject);
     }
-
-
+    
     //Collision With Player
-
     private void OnCollisionEnter(Collision other){
         if(other.transform.CompareTag("Player")){
             if(other.transform.TryGetComponent(out PlayerMovement playerMovement)){
@@ -69,14 +71,18 @@ public class Shape : MonoBehaviour
     }
 
     void Update(){
-
-        if(!(_playerMovement == null) && Input.GetMouseButtonDown(0)){
-            ReleaseObject();
+        if(_playerMovement != null)
+        {
+            _playerMovement.transform.position = transform.position;
+            if(Input.GetMouseButtonDown(0)) ReleaseObject();
         }
     }
 
-
-
-
-
+    private void OnDestroy()
+    {
+        if (_playerScore != null)
+        {
+            _playerScore.Lose();
+        }
+    }
 }
