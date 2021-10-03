@@ -5,7 +5,7 @@ public class UnstableHolder : MonoBehaviour, IObjectHolder<PlayerHoldable>
 {
     public PlayerHoldable Holdable => _holdable;
     
-    [BoxGroup("Properties"), SerializeField] private float _releaseOffset;
+    [BoxGroup("Properties"), SerializeField] private float _releaseOffset = 6f;
 
     private PlayerHoldable _holdable;
 

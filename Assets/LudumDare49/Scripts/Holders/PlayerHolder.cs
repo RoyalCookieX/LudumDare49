@@ -6,7 +6,7 @@ public class PlayerHolder : MonoBehaviour, IObjectHolder<PlayerHoldable>
 {
     public PlayerHoldable Holdable => _holdable;
 
-    [BoxGroup("Properties"), SerializeField] private float _releaseOffset;
+    [BoxGroup("Properties"), SerializeField] private float _releaseOffset = 6f;
     
     private PlayerHoldable _holdable;
     private Camera _mainCamera;
