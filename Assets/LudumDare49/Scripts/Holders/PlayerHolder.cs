@@ -50,6 +50,8 @@ public class PlayerHolder : MonoBehaviour, IObjectHolder<PlayerHoldable>
     public void Release(Vector2 startPos, Vector2 throwDir, float releaseOffset)
     {
         _holdable.Release(startPos, throwDir, releaseOffset);
+        if(_holdable.TryGetComponent(out PlayerScore score))
+            score.AddScore();
         _holdable = null;
     }
 

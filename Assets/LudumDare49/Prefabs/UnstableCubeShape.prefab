@@ -1,19 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1833295584617545695
+--- !u!114 &4085234150194357344
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9024425490028552049}
+  m_GameObject: {fileID: 1030380707645603541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd52ab1b346e49a9817286af01248d29, type: 3}
+  m_Script: {fileID: 11500000, guid: 52b2ac1d21964a229b2c1e51bb5af18a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _releaseOffset: 6
---- !u!1001 &7777311410463390338
+--- !u!1001 &1774164702839135014
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -22,7 +22,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1644865748379821555, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
       propertyPath: m_Name
-      value: CubeShape
+      value: UnstableCubeShape
       objectReference: {fileID: 0}
     - target: {fileID: 1644865748379821567, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
       propertyPath: m_RootOrder
@@ -83,27 +83,15 @@ PrefabInstance:
     - target: {fileID: 4938437200377577547, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: efbb794f5bd46d645b677124f7b59968, type: 2}
-    - target: {fileID: 4989959690588517615, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
-      propertyPath: _maxLifetime
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4989959690588517615, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
-      propertyPath: _releaseOffset
-      value: 5
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: 66f18d28983b53643829cb2a7775bb58, type: 2}
     - target: {fileID: 6536436943814687721, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-    - target: {fileID: 7941122133920371609, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1b1c5190f1fbcf84596202829e4e43e7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
---- !u!1 &9024425490028552049 stripped
+--- !u!1 &1030380707645603541 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1644865748379821555, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
-  m_PrefabInstance: {fileID: 7777311410463390338}
+  m_PrefabInstance: {fileID: 1774164702839135014}
   m_PrefabAsset: {fileID: 0}

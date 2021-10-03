@@ -10,7 +10,6 @@ public class Shape : MonoBehaviour
     [BoxGroup("Properties"), SerializeField] private float _moveSpeed;
     [BoxGroup("Properties"), MinMaxSlider(-5f, 5f), SerializeField] private Vector2 _rngMultiplierRange;
     [BoxGroup("Properties"), SerializeField] private float _maxLifetime;
-    [BoxGroup("Properties"), SerializeField] private float _releaseOffset;
     
     [BoxGroup("Components"), SerializeField] private Rigidbody _rigidbody;
 
