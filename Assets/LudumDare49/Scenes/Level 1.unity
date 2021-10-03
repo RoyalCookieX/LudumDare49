@@ -428,8 +428,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnObjects:
-  - {fileID: 9024425490028552049, guid: ab4eac9b535a75841990a47b4d147fc1, type: 3}
   - {fileID: 5318102003809908738, guid: 00f4b1283a333014aa510b68278e1b2c, type: 3}
+  - {fileID: 9024425490028552049, guid: ab4eac9b535a75841990a47b4d147fc1, type: 3}
   spawnRadius: 70
   player: {fileID: 224450143}
   stopSpawn: 0
