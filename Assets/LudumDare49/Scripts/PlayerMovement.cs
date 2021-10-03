@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 
 public class PlayerMovement : MonoBehaviour
-{  
+{
+    [SerializeField] private UnityEvent onThrown;
+    
     private Rigidbody _rb;
     private Vector2 _direction;
     private float _moveSpeed = 10f;
@@ -13,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private bool jumping = false;
 
     private MeshRenderer _mesh;
+    private Collider _collider;
 
     //private bool _held = false;
 
@@ -20,56 +24,42 @@ public class PlayerMovement : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _mesh = GetComponent<MeshRenderer>();
+        _collider = GetComponent<Collider>();
     }
 
     void Update()
     {
-
-
-
         Vector3 targetPos = Input.mousePosition;
         targetPos.z = 10;
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(targetPos);
         //Rotate Player Towards the Mouse
         
-
         if(Input.GetMouseButton(0) && !(jumping)){
             jumping = true;
-            
             Jump(targetPos, worldPos);
         }
-                   
-
     }
+    
     public void Jump(Vector3 targetPos, Vector3 worldPos){
-
-
-
         _direction = (worldPos - transform.position).normalized;
         _rb.AddForce(_direction * _moveSpeed, ForceMode.Impulse);
         _rb.velocity = Vector3.ClampMagnitude(_rb.velocity, _maxVelocity);
     }
 
-
     public void Hide(){
         jumping = false;
-        _mesh.enabled = false;
         _rb.velocity = Vector3.zero;
-
-
+        _mesh.enabled = false;
+        _collider.enabled = false;
     }
 
     public void Throw(Vector2 startPos, Vector2 throwDir, float releaseOffset){
-        
+        _mesh.enabled = true;
+        _collider.enabled = true;
         jumping = true;
 
         transform.position = (startPos + throwDir * releaseOffset);
         _rb.AddForce(throwDir * _moveSpeed, ForceMode.Impulse);
-        
-        _mesh.enabled = true;
-
+        onThrown?.Invoke();
     }
-
-
-
 }
