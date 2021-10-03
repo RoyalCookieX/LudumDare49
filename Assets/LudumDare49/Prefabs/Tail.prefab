@@ -51,7 +51,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a4c4c454c05472946a9f19ee27b78b6e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -72,7 +72,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.3
+  m_Time: 0.2
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -89,8 +89,62 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.9714415
-        value: 0.31740344
+        time: 0.34377256
+        value: 0.45391512
+        inSlope: -0.6256677
+        outSlope: -0.6256677
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.649562
+        value: 0.22685774
+        inSlope: -0.2907272
+        outSlope: -0.2907272
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.7327118
+        value: 0.4295049
+        inSlope: -0.47476628
+        outSlope: -0.47476628
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.81529623
+        value: 0.119990245
+        inSlope: -0.35435027
+        outSlope: -0.35435027
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.85504824
+        value: 0.34945557
+        inSlope: -0.53285813
+        outSlope: -0.53285813
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9124608
+        value: 0.0549815
+        inSlope: -0.6003111
+        outSlope: -0.6003111
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.964366
+        value: 0.23407009
         inSlope: -0.7127946
         outSlope: -0.7127946
         tangentMode: 0
@@ -111,7 +165,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.7607844, g: 0.75294125, b: 0.75294125, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 1}
       key1: {r: 0.7607844, g: 0.75294125, b: 0.75294125, a: 0}
       key2: {r: 1, g: 1, b: 1, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}

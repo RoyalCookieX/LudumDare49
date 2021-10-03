@@ -7,8 +7,8 @@ using Random = UnityEngine.Random;
 public class Spawner : MonoBehaviour
 {
     public List<GameObject> _spawnObjects;
-    public float spawnRadius;
-    public GameObject player;
+    public AnimationCurve _spawnCurve;
+    public float _spawnRadius;
     public bool stopSpawn = false;
 
     public float minTime = 1;
@@ -26,7 +26,10 @@ public class Spawner : MonoBehaviour
         {
             if (!stopSpawn)
             {
-                Vector3 spawnPos = transform.position + (Vector3)Random.insideUnitCircle * spawnRadius;
+                Vector3 spawnDir = Random.insideUnitCircle.normalized;
+                float t = _spawnCurve.Evaluate(Random.Range(0f, 1f));
+                float distanceFromOrigin = Mathf.Lerp(0f, _spawnRadius, t);
+                Vector3 spawnPos = transform.position + spawnDir * distanceFromOrigin;
                 GameObject spawnObject = _spawnObjects[Random.Range(0, _spawnObjects.Count)];
                 Instantiate(spawnObject, spawnPos, Quaternion.identity);
             }
@@ -37,6 +40,6 @@ public class Spawner : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, spawnRadius);
+        Gizmos.DrawWireSphere(transform.position, _spawnRadius);
     }
 }
