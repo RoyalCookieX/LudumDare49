@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 
 public class PlayerMovement : MonoBehaviour
-{  
+{
+    [SerializeField] private UnityEvent onThrown;
+    
     private Rigidbody _rb;
     private Vector2 _direction;
     private float _moveSpeed = 10f;
@@ -65,9 +68,9 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = (startPos + throwDir * releaseOffset);
         _rb.AddForce(throwDir * _moveSpeed, ForceMode.Impulse);
-        
+        onThrown?.Invoke();
         _mesh.enabled = true;
-
+        
     }
 
 
