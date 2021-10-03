@@ -7,9 +7,9 @@ using Random = UnityEngine.Random;
 public class Spawner : MonoBehaviour
 {
     public List<GameObject> _spawnObjects;
-    public AnimationCurve _spawnCurve;
-    public float _spawnRadius;
-    public bool stopSpawn = false;
+    public bool stopSpawn;
+    public Transform _spawnTarget;
+    public float _spawnDistanceFromPlayer;
 
     public float minTime = 1;
     public float maxTime = 10;
@@ -24,12 +24,11 @@ public class Spawner : MonoBehaviour
         yield return null;
         while (true)
         {
+            if(_spawnTarget == null) yield break;
             if (!stopSpawn)
             {
                 Vector3 spawnDir = Random.insideUnitCircle.normalized;
-                float t = _spawnCurve.Evaluate(Random.Range(0f, 1f));
-                float distanceFromOrigin = Mathf.Lerp(0f, _spawnRadius, t);
-                Vector3 spawnPos = transform.position + spawnDir * distanceFromOrigin;
+                Vector3 spawnPos = _spawnTarget.position + spawnDir * _spawnDistanceFromPlayer;
                 GameObject spawnObject = _spawnObjects[Random.Range(0, _spawnObjects.Count)];
                 Instantiate(spawnObject, spawnPos, Quaternion.identity);
             }
@@ -39,7 +38,8 @@ public class Spawner : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if(_spawnTarget == null) return;
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, _spawnRadius);
+        Gizmos.DrawWireSphere(_spawnTarget.position, _spawnDistanceFromPlayer);
     }
 }
