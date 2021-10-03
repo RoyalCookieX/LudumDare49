@@ -5,15 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public Animator intro;
+
+    public float transitionTime = 2f;
+
+    public GameObject introScreen;
+
     public void Menu()
     {
         SceneManager.LoadScene(0);
     }
 
-    /* public void Play() 
-     {
-         SceneManager.LoadScene();
-     }*/
+    public void Play()
+    {
+        introScreen.SetActive(true);
+        StartCoroutine(LoadIntro(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    IEnumerator LoadIntro(int levelIndex)
+    {
+        intro.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(levelIndex);
+    }
 
     public void Exit()
     {
@@ -22,10 +38,10 @@ public class MainMenu : MonoBehaviour
 
     public void Death()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     public void Options()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 }
