@@ -16,6 +16,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1644865748379821567, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644865748379821567, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644865748379821567, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644865748379821567, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -55,13 +67,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4989959690588517615, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
-      propertyPath: _moveSpeed
-      value: 10
-      objectReference: {fileID: 0}
+    - target: {fileID: 4938437200377577547, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: efbb794f5bd46d645b677124f7b59968, type: 2}
     - target: {fileID: 4989959690588517615, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
       propertyPath: _maxLifetime
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989959690588517615, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
+      propertyPath: _releaseOffset
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6536436943814687721, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
       propertyPath: m_Mesh
