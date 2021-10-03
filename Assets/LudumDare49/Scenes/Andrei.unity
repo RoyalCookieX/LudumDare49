@@ -453,6 +453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnObjects:
   - {fileID: 1030380707645603541, guid: 1bbdf406a05eb8647b2aaedcca8579ac, type: 3}
+  - {fileID: 8162754524376593309, guid: 6a0154e488e478f41b42f7735631f34e, type: 3}
   _spawnCurve:
     serializedVersion: 2
     m_Curve:
