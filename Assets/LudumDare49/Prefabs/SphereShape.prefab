@@ -75,5 +75,9 @@ PrefabInstance:
       propertyPath: _releaseOffset
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7941122133920371609, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1bcd0d7310c2a1e48b9679c64b73b746, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}

@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5964282322450326156, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -39.3
+      value: -61.8
       objectReference: {fileID: 0}
     - target: {fileID: 5964282322450326156, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
       propertyPath: m_LocalPosition.z
@@ -193,11 +193,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
---- !u!1 &224450143 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5964282322450326154, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
-  m_PrefabInstance: {fileID: 224450142}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &368906059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7000619043039214016, guid: bf52e1b7896e56b4488dd23bc9309f3f, type: 3}
@@ -289,7 +284,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.045720402, g: 0.0060519767, b: 0.0754717, a: 1}
+  m_BackGroundColor: {r: 0.07714438, g: 0.01214845, b: 0.122641504, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -306,7 +301,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 37.0625
+  orthographic size: 51.125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -330,7 +325,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245597517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -24.649998, z: -25}
+  m_LocalPosition: {x: 0, y: -35.899998, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -434,8 +429,31 @@ MonoBehaviour:
   _spawnObjects:
   - {fileID: 5318102003809908738, guid: 00f4b1283a333014aa510b68278e1b2c, type: 3}
   - {fileID: 9024425490028552049, guid: ab4eac9b535a75841990a47b4d147fc1, type: 3}
-  spawnRadius: 70
-  player: {fileID: 224450143}
+  _spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _spawnRadius: 70
   stopSpawn: 0
   minTime: 0.5
   maxTime: 1
@@ -479,7 +497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3436920056208459565, guid: d5cae18d278a5c0479469ba2808a3e4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -24.65
+      value: -35.9
       objectReference: {fileID: 0}
     - target: {fileID: 3436920056208459565, guid: d5cae18d278a5c0479469ba2808a3e4a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -594,10 +612,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7000619043039214017, guid: bf52e1b7896e56b4488dd23bc9309f3f, type: 3}
-      propertyPath: _attractionMultiplier
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 7000619043039214028, guid: bf52e1b7896e56b4488dd23bc9309f3f, type: 3}
       propertyPath: m_Name
       value: BlackHole
@@ -621,7 +635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8738250761705391420, guid: 99f049f8022cc8b478731aa79d4f0031, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -24.649998
+      value: -35.899998
       objectReference: {fileID: 0}
     - target: {fileID: 8738250761705391420, guid: 99f049f8022cc8b478731aa79d4f0031, type: 3}
       propertyPath: m_LocalPosition.z
