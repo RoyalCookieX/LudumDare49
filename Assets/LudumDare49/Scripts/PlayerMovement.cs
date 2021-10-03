@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool jumping = false;
 
-    [SerializeField] private MeshRenderer _mesh;
+    [SerializeField] private GameObject _meshObject;
     [SerializeField] private Collider _collider;
 
     //private bool _held = false;
@@ -47,12 +47,12 @@ public class PlayerMovement : MonoBehaviour
     public void Hide(){
         jumping = false;
         _rb.velocity = Vector3.zero;
-        _mesh.enabled = false;
+        _meshObject.SetActive(false);
         _collider.enabled = false;
     }
 
     public void Throw(Vector2 startPos, Vector2 throwDir, float releaseOffset){
-        _mesh.enabled = true;
+        _meshObject.SetActive(true);
         _collider.enabled = true;
         jumping = true;
 
