@@ -2470,6 +2470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackHole
       objectReference: {fileID: 0}
+    - target: {fileID: 7000619043039214028, guid: bf52e1b7896e56b4488dd23bc9309f3f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf52e1b7896e56b4488dd23bc9309f3f, type: 3}
 --- !u!1001 &8738250760782960267
