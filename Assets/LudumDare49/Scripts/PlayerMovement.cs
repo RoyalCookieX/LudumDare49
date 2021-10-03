@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Vector3 targetPos = Input.mousePosition;
-        targetPos.z = 20;
+        targetPos.z = 10;
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(targetPos);
         //Rotate Player Towards the Mouse
         
