@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public Animator intro;
+    //public Animator intro;
 
-    public float transitionTime = 2f;
+    //public float transitionTime = 2f;
 
-    public GameObject introScreen;
+    //public GameObject introScreen;
 
     public void Menu()
     {
