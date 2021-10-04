@@ -285,6 +285,20 @@ MonoBehaviour:
       m_Height: 14
     m_Scale: 1
     m_AtlasIndex: 0
+  - m_Index: 95
+    m_Metrics:
+      m_Width: 9.75
+      m_Height: 92.375
+      m_HorizontalBearingX: 5.890625
+      m_HorizontalBearingY: 86.65625
+      m_HorizontalAdvance: 18.859375
+    m_GlyphRect:
+      m_X: 302
+      m_Y: 88
+      m_Width: 11
+      m_Height: 93
+    m_Scale: 1
+    m_AtlasIndex: 0
   m_CharacterTable:
   - m_ElementType: 1
     m_Unicode: 32
@@ -325,6 +339,10 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 8230
     m_GlyphIndex: 401
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 124
+    m_GlyphIndex: 95
     m_Scale: 1
   m_AtlasTextures:
   - {fileID: 28256370963634744}
@@ -368,47 +386,55 @@ MonoBehaviour:
     m_Y: 0
     m_Width: 68
     m_Height: 99
+  - m_X: 292
+    m_Y: 78
+    m_Width: 30
+    m_Height: 112
   m_FreeGlyphRects:
-  - m_X: 0
-    m_Y: 128
-    m_Width: 1023
-    m_Height: 895
   - m_X: 128
     m_Y: 29
     m_Width: 7
     m_Height: 994
   - m_X: 56
-    m_Y: 126
-    m_Width: 967
-    m_Height: 897
-  - m_X: 128
-    m_Y: 102
-    m_Width: 895
-    m_Height: 921
-  - m_X: 56
     m_Y: 33
     m_Width: 24
     m_Height: 990
-  - m_X: 201
-    m_Y: 99
-    m_Width: 822
-    m_Height: 924
-  - m_X: 201
-    m_Y: 96
-    m_Width: 147
-    m_Height: 927
-  - m_X: 236
-    m_Y: 80
-    m_Width: 112
-    m_Height: 943
-  - m_X: 292
-    m_Y: 78
-    m_Width: 56
-    m_Height: 945
   - m_X: 416
     m_Y: 0
     m_Width: 607
     m_Height: 1023
+  - m_X: 0
+    m_Y: 190
+    m_Width: 1023
+    m_Height: 833
+  - m_X: 0
+    m_Y: 128
+    m_Width: 292
+    m_Height: 895
+  - m_X: 56
+    m_Y: 126
+    m_Width: 236
+    m_Height: 897
+  - m_X: 128
+    m_Y: 102
+    m_Width: 164
+    m_Height: 921
+  - m_X: 322
+    m_Y: 99
+    m_Width: 701
+    m_Height: 924
+  - m_X: 201
+    m_Y: 96
+    m_Width: 91
+    m_Height: 927
+  - m_X: 236
+    m_Y: 80
+    m_Width: 56
+    m_Height: 943
+  - m_X: 322
+    m_Y: 78
+    m_Width: 26
+    m_Height: 945
   m_fontInfo:
     Name: Oswald
     PointSize: 71

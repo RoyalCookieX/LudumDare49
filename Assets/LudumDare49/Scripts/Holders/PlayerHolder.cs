@@ -1,11 +1,15 @@
 using System;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerHolder : MonoBehaviour, IObjectHolder<PlayerHoldable>
 {
     public PlayerHoldable Holdable => _holdable;
 
+    [BoxGroup("Events"), SerializeField] private UnityEvent _onHold;
+    [BoxGroup("Events"), SerializeField] private UnityEvent _onRelease;
+    
     [BoxGroup("Properties"), SerializeField] private float _releaseOffset = 6f;
     
     private PlayerHoldable _holdable;
@@ -33,18 +37,26 @@ public class PlayerHolder : MonoBehaviour, IObjectHolder<PlayerHoldable>
 
     private void OnCollisionEnter(Collision other)
     {
-        if(!other.transform.CompareTag("Player")) return;
-
-        if (other.transform.TryGetComponent(out PlayerHoldable holdable))
+        if (other.transform.CompareTag("Player"))
         {
-            HoldObject(holdable);
+            if (other.transform.TryGetComponent(out PlayerHoldable holdable))
+            {
+                HoldObject(holdable);
+            }
         }
+        else if (other.transform.CompareTag("BlackHole"))
+        {
+            if(_holdable != null) _holdable.DestroyPlayer();
+        }
+
+
     }
 
     public void HoldObject(PlayerHoldable holdable)
     {
         _holdable = holdable;
         _holdable.Hold();
+        _onHold?.Invoke();
     }
 
     public void Release(Vector2 startPos, Vector2 throwDir, float releaseOffset)
@@ -52,11 +64,7 @@ public class PlayerHolder : MonoBehaviour, IObjectHolder<PlayerHoldable>
         _holdable.Release(startPos, throwDir, releaseOffset);
         if(_holdable.TryGetComponent(out PlayerScore score))
             score.AddScore();
+        _onRelease?.Invoke();;
         _holdable = null;
-    }
-
-    private void OnDestroy()
-    {
-        if(_holdable != null) _holdable.DestroyPlayer();
     }
 }

@@ -13,13 +13,13 @@ public class PlayerScore : MonoBehaviour
         _playerStats.Reset();
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.transform.CompareTag("BlackHole"))
-        {
-            Lose();
-        }
-    }
+    // private void OnCollisionEnter(Collision other)
+    // {
+    //     if (other.transform.CompareTag("BlackHole"))
+    //     {
+    //         Lose();
+    //     }
+    // }
 
     public void AddScore()
     {

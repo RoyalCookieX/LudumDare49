@@ -2,6 +2,7 @@ using System;
 using Cinemachine;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(CinemachineImpulseSource))]
@@ -9,6 +10,7 @@ public class UnstableHolder : MonoBehaviour, IObjectHolder<PlayerHoldable>
 {
     public PlayerHoldable Holdable => _holdable;
 
+    [BoxGroup("Events"), SerializeField] private UnityEvent _onHold;
     
     [BoxGroup("Properties"), SerializeField] private float _releaseOffset = 6f;
 
@@ -34,6 +36,7 @@ public class UnstableHolder : MonoBehaviour, IObjectHolder<PlayerHoldable>
     {
         _holdable = holdable;
         _holdable.Hold();
+        _onHold?.Invoke();
         Release(transform.position, Random.insideUnitCircle.normalized, _releaseOffset);
         _impulseSource.GenerateImpulse();
     }

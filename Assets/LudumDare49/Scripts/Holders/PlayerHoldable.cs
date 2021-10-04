@@ -7,12 +7,12 @@ public class PlayerHoldable : MonoBehaviour, IHoldable
     [SerializeField] private UnityEvent onHeld;
     [SerializeField] private UnityEvent<Vector2, Vector2, float> onReleased;
     [SerializeField] private UnityEvent onDestroyed;
-    
-    private void OnDestroy()
+
+    private void OnCollisionEnter(Collision other)
     {
-        DestroyPlayer();
+        if(other.transform.CompareTag("BlackHole")) DestroyPlayer();
     }
-    
+
     public void Hold()
     {
         onHeld?.Invoke();
