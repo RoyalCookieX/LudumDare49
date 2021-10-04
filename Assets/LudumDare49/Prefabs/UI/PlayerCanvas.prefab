@@ -2360,6 +2360,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4465120988138793187, guid: ba71cbae9fbcde54a8980f2ebd34db42, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465120988138793187, guid: ba71cbae9fbcde54a8980f2ebd34db42, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6716286282972048051}
+    - target: {fileID: 4465120988138793187, guid: ba71cbae9fbcde54a8980f2ebd34db42, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465120988138793187, guid: ba71cbae9fbcde54a8980f2ebd34db42, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerHUD, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465120988138793187, guid: ba71cbae9fbcde54a8980f2ebd34db42, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5715440385581253727, guid: ba71cbae9fbcde54a8980f2ebd34db42, type: 3}
       propertyPath: m_Name
       value: SettingsPanel
