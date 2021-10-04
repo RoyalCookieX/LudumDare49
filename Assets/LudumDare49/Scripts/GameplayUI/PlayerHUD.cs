@@ -7,21 +7,9 @@ using UnityEngine.Events;
 
 public class PlayerHUD : MonoBehaviour
 {
-    [BoxGroup("Events"), SerializeField] private UnityEvent _onPauseKeyPressed;
-    
     [BoxGroup("Components"), SerializeField] private GameObject[] _panels;
 
     [BoxGroup("Properties"), SerializeField] private int _startIndex = 0;
-
-    [BoxGroup("Properties"), SerializeField] private KeyCode _pauseKey;
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(_pauseKey))
-        {
-            _onPauseKeyPressed?.Invoke();
-        }
-    }
 
     public void SetPanel(int index)
     {
