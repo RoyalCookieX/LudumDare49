@@ -859,6 +859,20 @@ MonoBehaviour:
       m_Height: 64
     m_Scale: 1
     m_AtlasIndex: 0
+  - m_Index: 72
+    m_Metrics:
+      m_Width: 42.84375
+      m_Height: 68.375
+      m_HorizontalBearingX: 2.90625
+      m_HorizontalBearingY: 67.5
+      m_HorizontalAdvance: 50.71875
+    m_GlyphRect:
+      m_X: 830
+      m_Y: 314
+      m_Width: 44
+      m_Height: 69
+    m_Scale: 1
+    m_AtlasIndex: 0
   m_CharacterTable:
   - m_ElementType: 1
     m_Unicode: 32
@@ -1063,6 +1077,10 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 52
     m_GlyphIndex: 24
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 100
+    m_GlyphIndex: 72
     m_Scale: 1
   m_AtlasTextures:
   - {fileID: 28204114720316640}
@@ -1270,6 +1288,10 @@ MonoBehaviour:
     m_Y: 235
     m_Width: 67
     m_Height: 83
+  - m_X: 820
+    m_Y: 304
+    m_Width: 63
+    m_Height: 88
   m_FreeGlyphRects:
   - m_X: 75
     m_Y: 29
@@ -1344,10 +1366,6 @@ MonoBehaviour:
     m_Width: 1023
     m_Height: 598
   - m_X: 63
-    m_Y: 360
-    m_Width: 960
-    m_Height: 663
-  - m_X: 63
     m_Y: 356
     m_Width: 15
     m_Height: 667
@@ -1404,10 +1422,6 @@ MonoBehaviour:
     m_Width: 10
     m_Height: 51
   - m_X: 111
-    m_Y: 336
-    m_Width: 912
-    m_Height: 687
-  - m_X: 111
     m_Y: 323
     m_Width: 644
     m_Height: 700
@@ -1419,10 +1433,6 @@ MonoBehaviour:
     m_Y: 255
     m_Width: 566
     m_Height: 768
-  - m_X: 820
-    m_Y: 253
-    m_Width: 11
-    m_Height: 770
   - m_X: 962
     m_Y: 235
     m_Width: 61
@@ -1431,13 +1441,29 @@ MonoBehaviour:
     m_Y: 219
     m_Width: 11
     m_Height: 16
+  - m_X: 63
+    m_Y: 392
+    m_Width: 960
+    m_Height: 631
+  - m_X: 63
+    m_Y: 360
+    m_Width: 757
+    m_Height: 663
+  - m_X: 111
+    m_Y: 336
+    m_Width: 709
+    m_Height: 687
   - m_X: 820
+    m_Y: 253
+    m_Width: 11
+    m_Height: 51
+  - m_X: 883
     m_Y: 318
-    m_Width: 203
+    m_Width: 140
     m_Height: 705
-  - m_X: 820
+  - m_X: 883
     m_Y: 304
-    m_Width: 75
+    m_Width: 12
     m_Height: 719
   m_fontInfo:
     Name: Roboto

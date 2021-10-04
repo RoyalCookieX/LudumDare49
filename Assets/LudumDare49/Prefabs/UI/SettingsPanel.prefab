@@ -387,8 +387,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
-  m_IsOn: 1
+      m_Calls:
+      - m_Target: {fileID: 2785238409710353465}
+        m_TargetAssemblyTypeName: Options, Assembly-CSharp
+        m_MethodName: SetFullscreen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_IsOn: 0
 --- !u!1 &2742682684576950737
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,8 +980,7 @@ GameObject:
   - component: {fileID: 9182150893072656467}
   - component: {fileID: 5377535114713595461}
   - component: {fileID: 1451076176163537919}
-  - component: {fileID: 3849220975378338645}
-  - component: {fileID: 243655100141181939}
+  - component: {fileID: 2785238409710353465}
   m_Layer: 5
   m_Name: SettingsPanel
   m_TagString: Untagged
@@ -1037,7 +1048,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3849220975378338645
+--- !u!114 &2785238409710353465
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1047,20 +1058,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 444a144bbe38a6a44a5b51ba9b084442, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 0}
-  resolutionDropdown: {fileID: 0}
---- !u!114 &243655100141181939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5715440385581253727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e4c1fc30757f34a96d2b0d24e865ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6179518112689641823
@@ -1771,7 +1768,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 243655100141181939}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: Menu
         m_Mode: 1
@@ -2051,6 +2048,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4625113225561458606, guid: efbd1f32347c75c4d96ffec8f1e9a79d, type: 3}
+      propertyPath: _mixerGroup
+      value: 
+      objectReference: {fileID: 3954752362354470948, guid: c2690e4dc674f91448a02377ccec47f9, type: 2}
+    - target: {fileID: 4625113225561458606, guid: efbd1f32347c75c4d96ffec8f1e9a79d, type: 3}
+      propertyPath: _volumeName
+      value: Volume_SFX
+      objectReference: {fileID: 0}
     - target: {fileID: 4871837891797575144, guid: efbd1f32347c75c4d96ffec8f1e9a79d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2177,6 +2182,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4625113225561458606, guid: efbd1f32347c75c4d96ffec8f1e9a79d, type: 3}
+      propertyPath: _mixerGroup
+      value: 
+      objectReference: {fileID: 3465702205482160740, guid: c2690e4dc674f91448a02377ccec47f9, type: 2}
+    - target: {fileID: 4625113225561458606, guid: efbd1f32347c75c4d96ffec8f1e9a79d, type: 3}
+      propertyPath: _volumeName
+      value: Volume_Music
+      objectReference: {fileID: 0}
     - target: {fileID: 4871837891797575144, guid: efbd1f32347c75c4d96ffec8f1e9a79d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2302,6 +2315,14 @@ PrefabInstance:
     - target: {fileID: 3234896270717064238, guid: efbd1f32347c75c4d96ffec8f1e9a79d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625113225561458606, guid: efbd1f32347c75c4d96ffec8f1e9a79d, type: 3}
+      propertyPath: _mixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: c2690e4dc674f91448a02377ccec47f9, type: 2}
+    - target: {fileID: 4625113225561458606, guid: efbd1f32347c75c4d96ffec8f1e9a79d, type: 3}
+      propertyPath: _volumeName
+      value: Volume_Master
       objectReference: {fileID: 0}
     - target: {fileID: 4871837891797575144, guid: efbd1f32347c75c4d96ffec8f1e9a79d, type: 3}
       propertyPath: m_AnchorMax.x
