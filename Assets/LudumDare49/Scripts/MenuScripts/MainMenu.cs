@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
+    void Start(){
+        Time.timeScale = 1f;
+    }
     //public Animator intro;
 
     //public float transitionTime = 2f;
