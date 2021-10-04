@@ -2,10 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class IntroAnimation : MonoBehaviour
 {
+    [SerializeField] private UnityEvent _onGameStart;
+    
     [SerializeField] private GameObject _blackHole;
     [SerializeField] private Rigidbody _playerRB;
     [SerializeField] private Vector2 _origin = Vector2.zero;
@@ -17,6 +20,11 @@ public class IntroAnimation : MonoBehaviour
     {
         _blackHole.SetActive(false);
         _playerRB.gameObject.SetActive(false);
+    }
+
+    public void StartGame()
+    {
+        _onGameStart?.Invoke();
     }
 
     public void ShowBlackHole()
