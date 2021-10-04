@@ -18,18 +18,19 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        introScreen.SetActive(true);
-        StartCoroutine(LoadIntro(SceneManager.GetActiveScene().buildIndex + 1));
+        SceneManager.LoadScene(1);
+        /*introScreen.SetActive(true);
+        StartCoroutine(LoadIntro(SceneManager.GetActiveScene().buildIndex + 1));*/
     }
 
-    IEnumerator LoadIntro(int levelIndex)
+    /*IEnumerator LoadIntro(int levelIndex)
     {
         intro.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(levelIndex);
-    }
+    }*/
 
     public void Exit()
     {
