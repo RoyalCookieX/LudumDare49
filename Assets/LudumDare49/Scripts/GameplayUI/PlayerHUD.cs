@@ -11,6 +11,10 @@ public class PlayerHUD : MonoBehaviour
 
     [BoxGroup("Properties"), SerializeField] private int _startIndex = 0;
 
+    void Start(){
+        PauseGame(false);
+    }
+
     public void SetPanel(int index)
     {
         if(index < 0 || index > _panels.Length - 1) return;

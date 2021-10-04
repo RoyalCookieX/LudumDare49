@@ -686,6 +686,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bbdf406a05eb8647b2aaedcca8579ac, type: 3}
+--- !u!1 &743744241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5964282322450326154, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
+  m_PrefabInstance: {fileID: 2049333222}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &743744247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743744241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef68e094739b64849abcda302807c6af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1209200490
 GameObject:
   m_ObjectHideFlags: 0
@@ -6192,7 +6209,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 71, y: -171}
+  m_AnchoredPosition: {x: 71, y: -173}
   m_SizeDelta: {x: 93.5613, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1589942278
@@ -7610,7 +7627,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 50
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -11508,6 +11525,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 522301897576407285, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5964282322450326153, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
       propertyPath: m_Constraints
       value: 90
@@ -11571,6 +11592,10 @@ PrefabInstance:
     - target: {fileID: 5964282322450326156, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.299
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511956674804055040, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 585557686228845829, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}

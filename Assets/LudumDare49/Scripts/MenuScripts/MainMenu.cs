@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
 
     public void Menu()
     {
+        Debug.Log("Loading Menu");
         SceneManager.LoadScene(0);
     }
 
