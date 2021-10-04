@@ -49,7 +49,8 @@ public class PlayerMovement : MonoBehaviour
     public void Throw(Vector2 startPos, Vector2 throwDir, float releaseOffset){
         jumping = true;
 
-        transform.position = (startPos + throwDir * releaseOffset);
+        Debug.Log(throwDir);
+        transform.position = (startPos + throwDir.normalized * releaseOffset);
         _rb.AddForce(throwDir * _moveSpeed, ForceMode.Impulse);
     }
 }
