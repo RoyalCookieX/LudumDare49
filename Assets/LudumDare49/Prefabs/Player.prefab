@@ -252,10 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 6561221815703692327, guid: 6b66f749c21716747855685064d2ee9e, type: 3}
-  _entries:
-  - name: Death
-    clip: {fileID: 8300000, guid: 2ffeacfa693f18a4abe32652fbfb57a0, type: 3}
-    mixerGroup: {fileID: 3465702205482160740, guid: c2690e4dc674f91448a02377ccec47f9, type: 2}
+  _entries: []
 --- !u!1 &5964282322450326154
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,19 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onLose:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6002996817797779726}
-        m_TargetAssemblyTypeName: AudioSpawner, Assembly-CSharp
-        m_MethodName: SpawnAudio
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Death
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _playerStats: {fileID: 11400000, guid: 0a5e35263bfb8044f970130d79ce85b7, type: 2}
 --- !u!114 &585557686228845829
 MonoBehaviour:

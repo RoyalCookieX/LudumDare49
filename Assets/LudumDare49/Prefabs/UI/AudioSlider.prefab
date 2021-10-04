@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3234896270717064238}
-  - component: {fileID: 4625113225561458606}
+  - component: {fileID: 3440411525920871908}
   - component: {fileID: 4374637097595682367}
   m_Layer: 5
   m_Name: AudioSlider
@@ -40,7 +40,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4625113225561458606
+--- !u!114 &3440411525920871908
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -52,8 +52,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b482832e3e2984a993a924c49cb72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
   _volumeName: 
-  _mixerGroup: {fileID: 0}
 --- !u!114 &4374637097595682367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,16 +100,16 @@ MonoBehaviour:
   m_FillRect: {fileID: 4871837891797575144}
   m_HandleRect: {fileID: 863939423669638312}
   m_Direction: 0
-  m_MinValue: 0.01
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4625113225561458606}
+      - m_Target: {fileID: 3440411525920871908}
         m_TargetAssemblyTypeName: AudioSlider, Assembly-CSharp
-        m_MethodName: SetValue
+        m_MethodName: UpdateValue
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

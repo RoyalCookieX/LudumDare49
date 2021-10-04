@@ -206,7 +206,15 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 379570105838108518, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
+      propertyPath: onLose.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 379570105838108518, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
       propertyPath: onLose.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1763590858}
+    - target: {fileID: 379570105838108518, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
+      propertyPath: onLose.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1763590858}
     - target: {fileID: 379570105838108518, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
@@ -214,7 +222,15 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 379570105838108518, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
+      propertyPath: onLose.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 379570105838108518, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
       propertyPath: onLose.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 379570105838108518, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
+      propertyPath: onLose.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetPanel
       objectReference: {fileID: 0}
     - target: {fileID: 379570105838108518, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
@@ -222,11 +238,27 @@ PrefabInstance:
       value: PlayerHUD, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 379570105838108518, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
+      propertyPath: onLose.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerHUD, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 379570105838108518, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
       propertyPath: onLose.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 379570105838108518, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
+      propertyPath: onLose.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 379570105838108518, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
+      propertyPath: onLose.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 379570105838108518, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
       propertyPath: onLose.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 379570105838108518, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
+      propertyPath: onLose.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5964282322450326153, guid: fcf4e1b8598682a4983ba8023f00d314, type: 3}
