@@ -28,7 +28,7 @@ public class AudioSingleton : MonoBehaviour
 
     private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
-        if(gameObject == null) return;
+        if(enabled == false) return;
         if(arg0.name != _sceneName && arg0.name != null) Destroy(gameObject);
     }
 }
