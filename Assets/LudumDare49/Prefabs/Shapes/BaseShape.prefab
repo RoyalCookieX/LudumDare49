@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6536436943814687721}
   - component: {fileID: 7941122133920371609}
   - component: {fileID: 1091212384256636565}
+  - component: {fileID: 4005463372880618498}
   m_Layer: 0
   m_Name: BaseShape
   m_TagString: Shape
@@ -252,5 +253,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 6911579090902320401, guid: 34aa99e027ca36d48b080b23eb4f9b83, type: 3}
   _callOnEnable: 0
-  _callOnDisable: 0
   _callOnCollision: 1
+--- !u!114 &4005463372880618498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644865748379821555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d3e94a8766075489d850905de24f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 6561221815703692327, guid: 6b66f749c21716747855685064d2ee9e, type: 3}
+  _entries:
+  - name: Possess
+    clips: []
+    mixerGroup: {fileID: 3954752362354470948, guid: c2690e4dc674f91448a02377ccec47f9, type: 2}
+  _spawnOnStart: 0
+  _defaultClip: 

@@ -4885,4 +4885,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _particles: {fileID: 890309372025086419}
-  _maxDuration: 5
+  _maxDuration: 1

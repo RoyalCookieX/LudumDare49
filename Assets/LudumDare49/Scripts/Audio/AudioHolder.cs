@@ -10,6 +10,7 @@ public class AudioHolder : MonoBehaviour
 
     private IEnumerator Start()
     {
+        DontDestroyOnLoad(gameObject);
         yield return new WaitUntil(() => _audioSource.clip != null);
         _audioSource.Play();
         yield return null;
