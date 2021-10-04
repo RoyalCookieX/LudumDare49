@@ -478,6 +478,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46bb349e9a4eb2247a9da4675c784036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onGameStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1763590858}
+        m_TargetAssemblyTypeName: PlayerHUD, Assembly-CSharp
+        m_MethodName: SetPanel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _blackHole: {fileID: 689296516}
   _playerRB: {fileID: 122205566}
   _origin: {x: 0, y: 0}
@@ -538,7 +553,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 18.75
+  orthographic size: 50
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -562,7 +577,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245597517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -25}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1248,7 +1263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8738250761705391420, guid: 99f049f8022cc8b478731aa79d4f0031, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 8738250761705391420, guid: 99f049f8022cc8b478731aa79d4f0031, type: 3}
       propertyPath: m_LocalRotation.w
