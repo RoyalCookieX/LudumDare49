@@ -10,16 +10,8 @@ public class PlayerScore : MonoBehaviour
 
     private void Start()
     {
-        _playerStats.Reset();
+        _playerStats.ResetScore();
     }
-
-    // private void OnCollisionEnter(Collision other)
-    // {
-    //     if (other.transform.CompareTag("BlackHole"))
-    //     {
-    //         Lose();
-    //     }
-    // }
 
     public void AddScore()
     {

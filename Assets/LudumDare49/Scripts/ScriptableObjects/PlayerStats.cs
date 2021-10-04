@@ -21,14 +21,14 @@ public class PlayerStats : ScriptableObject
         if (_score > _highscore) _highscore = _score;
     }
     
-    public void Reset()
+    public void ResetScore()
     {
         _score = 0;
     }
 
     public void HardReset()
     {
-        Reset();
+        ResetScore();
         _highscore = 0;
     }
 }

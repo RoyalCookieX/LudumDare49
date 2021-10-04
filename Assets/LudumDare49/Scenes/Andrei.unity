@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OctahedronShape
       objectReference: {fileID: 0}
+    - target: {fileID: 2106925911923294840, guid: a1d2172731da8cd4082f3c47e390c8d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1d2172731da8cd4082f3c47e390c8d7, type: 3}
 --- !u!1001 &224450142
@@ -370,6 +374,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeShape
       objectReference: {fileID: 0}
+    - target: {fileID: 9024425490028552049, guid: ab4eac9b535a75841990a47b4d147fc1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9024425490028552061, guid: ab4eac9b535a75841990a47b4d147fc1, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -426,6 +434,10 @@ PrefabInstance:
     - target: {fileID: 1030380707645603541, guid: 1bbdf406a05eb8647b2aaedcca8579ac, type: 3}
       propertyPath: m_Name
       value: UnstableCubeShape
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030380707645603541, guid: 1bbdf406a05eb8647b2aaedcca8579ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1030380707645603545, guid: 1bbdf406a05eb8647b2aaedcca8579ac, type: 3}
       propertyPath: m_RootOrder
@@ -550,6 +562,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseShape
       objectReference: {fileID: 0}
+    - target: {fileID: 1644865748379821555, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1644865748379821567, guid: 1b7c151d4bb013b4cb335cec9e040e19, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -606,6 +622,10 @@ PrefabInstance:
     - target: {fileID: 5318102003809908738, guid: 00f4b1283a333014aa510b68278e1b2c, type: 3}
       propertyPath: m_Name
       value: SphereShape
+      objectReference: {fileID: 0}
+    - target: {fileID: 5318102003809908738, guid: 00f4b1283a333014aa510b68278e1b2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5318102003809908750, guid: 00f4b1283a333014aa510b68278e1b2c, type: 3}
       propertyPath: m_RootOrder
@@ -859,6 +879,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UnstableSphereShape
       objectReference: {fileID: 0}
+    - target: {fileID: 8162754524376593309, guid: 6a0154e488e478f41b42f7735631f34e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a0154e488e478f41b42f7735631f34e, type: 3}
 --- !u!1001 &1624919369
@@ -871,6 +895,10 @@ PrefabInstance:
     - target: {fileID: 5508487205531834725, guid: bd717a4aec5273a4ea81c0c013c6c672, type: 3}
       propertyPath: m_Name
       value: PyramidShape
+      objectReference: {fileID: 0}
+    - target: {fileID: 5508487205531834725, guid: bd717a4aec5273a4ea81c0c013c6c672, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5508487205531834729, guid: bd717a4aec5273a4ea81c0c013c6c672, type: 3}
       propertyPath: m_RootOrder
@@ -954,11 +982,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnObjects:
   - {fileID: 1030380707645603541, guid: 1bbdf406a05eb8647b2aaedcca8579ac, type: 3}
+  - {fileID: 1030380707645603541, guid: 1bbdf406a05eb8647b2aaedcca8579ac, type: 3}
   - {fileID: 8162754524376593309, guid: 6a0154e488e478f41b42f7735631f34e, type: 3}
+  - {fileID: 8162754524376593309, guid: 6a0154e488e478f41b42f7735631f34e, type: 3}
+  - {fileID: 5318102003809908738, guid: 00f4b1283a333014aa510b68278e1b2c, type: 3}
   stopSpawn: 0
-  _spawnTarget: {fileID: 0}
-  _spawnDistanceFromPlayer: 0
-  minTime: 0.5
+  _spawnTarget: {fileID: 163074920}
+  _spawnDistanceFromPlayer: 20
+  minTime: 0.2
   maxTime: 0.5
 --- !u!4 &2063844413
 Transform:
@@ -984,6 +1015,10 @@ PrefabInstance:
     - target: {fileID: 1729272532579708036, guid: d354130a9066a1341ac2d68f1c607897, type: 3}
       propertyPath: m_Name
       value: IcosahedronShape
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729272532579708036, guid: d354130a9066a1341ac2d68f1c607897, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1729272532579708040, guid: d354130a9066a1341ac2d68f1c607897, type: 3}
       propertyPath: m_RootOrder
