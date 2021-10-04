@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 585557686228845829}
   - component: {fileID: 5964282322450326159}
   - component: {fileID: 5964282322450326153}
+  - component: {fileID: 4294496293426696803}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -363,6 +364,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 40
   m_CollisionDetection: 0
+--- !u!114 &4294496293426696803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5964282322450326154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8fc0c6c2e0e3d347a126e42ae3d9145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 9030722109992698023}
+  _materialIndex: 0
+  colors:
+  - {r: 0.07058824, g: 0.07058824, b: 0.07058824, a: 1}
+  - {r: 0.2784314, g: 0.21176471, b: 0.12156863, a: 1}
+  - {r: 0.5411765, g: 0.36862746, b: 0.13333334, a: 1}
+  - {r: 0.26666668, g: 0.26666668, b: 0.32941177, a: 1}
+  - {r: 0.63529414, g: 0.63529414, b: 0.7294118, a: 1}
+  - {r: 0.6132076, g: 0.6117647, b: 0.6117647, a: 1}
+  - {r: 0.85882354, g: 0.47058824, b: 0.078431375, a: 1}
+  - {r: 0.92156863, g: 0.7137255, b: 0.1764706, a: 1}
+  - {r: 0.8117647, g: 0.7529412, b: 0.6, a: 1}
+  - {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &7373357521816134002
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +453,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 86cefacb4d0674e41bdc75b4738f0283, type: 3}
+  - {fileID: 2100000, guid: bdb4775c5e9104844a94d1b30fb020b3, type: 2}
   - {fileID: 2100000, guid: f850b58e096231a449fc12e297ffdd9e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
