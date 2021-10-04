@@ -8,7 +8,7 @@ public class Spin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        this.transform.Rotate(0.01f,0.5f,0);        
         
-        this.transform.Rotate(0,1,0);
     }
 }
