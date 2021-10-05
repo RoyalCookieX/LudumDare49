@@ -3,17 +3,6 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Audio;
-using Random = UnityEngine.Random;
-
-[System.Serializable]
-public struct AudioEntry
-{
-    public string name;
-    public AudioClip[] clips;
-    public AudioMixerGroup mixerGroup;
-
-    public AudioClip RandomClip() => clips[Random.Range(0, clips.Length)];
-}
 
 public class AudioSpawner : MonoBehaviour
 {

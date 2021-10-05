@@ -7,21 +7,25 @@ using UnityEngine.Events;
 
 public class PanelSwapper : MonoBehaviour
 {
+    [BoxGroup("Events"), SerializeField] private UnityEvent<int> onPanelSelected;
+    
     [BoxGroup("Components"), SerializeField] private CanvasGroup[] _panels;
 
     [BoxGroup("Properties"), SerializeField] private int _startIndex = 0;
 
     private void Start()
     {
-        SetPanel(_startIndex);
+        if(_startIndex > 0 && _startIndex < _panels.Length - 1)
+            SelectPanel(_startIndex);
     }
 
-    public void SetPanel(int index)
+    public void SelectPanel(int index)
     {
         if(index < 0 || index > _panels.Length - 1) return;
 
         HideAllPanels();
         ShowPanel(index, true);
+        onPanelSelected?.Invoke(index);
     }
     
     public void ShowPanel(int index, bool visible)

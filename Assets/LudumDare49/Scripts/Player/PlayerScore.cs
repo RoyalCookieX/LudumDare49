@@ -16,12 +16,10 @@ public class PlayerScore : MonoBehaviour
     public void AddScore()
     {
         _playerStats.Increment();
-        Debug.Log(_playerStats.Score);
     }
 
     public void Lose()
     {
-        Debug.Log("Lose Game");
         onLose?.Invoke();
         if(gameObject != null) Destroy(gameObject);
     }

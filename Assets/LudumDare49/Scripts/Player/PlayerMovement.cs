@@ -9,12 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rb;
     private Vector2 _direction;
     [SerializeField] private float _moveSpeed = 10f;
-    [SerializeField] private float _maxVelocity = 10f;
 
     private bool jumping = false;
     private Camera _camera;
-
-    //private bool _held = false;
 
     void Start()
     {
@@ -27,18 +24,12 @@ public class PlayerMovement : MonoBehaviour
         Vector3 targetPos = Input.mousePosition;
         targetPos.z = 10;
         Vector3 worldPos = _camera.ScreenToWorldPoint(targetPos);
+        Vector3 throwDir = (worldPos - transform.position).normalized;
         
         //Rotate Player Towards the Mouse
         if(Input.GetMouseButton(0) && !(jumping)) {
-            jumping = true;
-            Jump(targetPos, worldPos);
+            Throw(transform.position, throwDir, 0f);
         }
-    }
-    
-    public void Jump(Vector3 targetPos, Vector3 worldPos){
-        _direction = (worldPos - transform.position).normalized;
-        _rb.AddForce(_direction * _moveSpeed, ForceMode.Impulse);
-        _rb.velocity = Vector3.ClampMagnitude(_rb.velocity, _maxVelocity);
     }
 
     public void Hide() {
@@ -48,9 +39,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Throw(Vector2 startPos, Vector2 throwDir, float releaseOffset){
         jumping = true;
-
-        Debug.Log(throwDir);
+        
         transform.position = (startPos + throwDir.normalized * releaseOffset);
-        _rb.AddForce(throwDir * _moveSpeed, ForceMode.Impulse);
+        _rb.AddForce(throwDir * _moveSpeed, ForceMode.VelocityChange);
     }
 }
