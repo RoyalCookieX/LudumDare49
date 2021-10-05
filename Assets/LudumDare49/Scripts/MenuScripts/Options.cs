@@ -33,7 +33,8 @@ public class Options : MonoBehaviour
 
         float newValue = Mathf.Log10(value) * 20;
         volumeSlider.mixerGroup.audioMixer.SetFloat(volumeName, newValue);
-        volumeSlider.slider.value = value;
+        PlayerPrefs.SetFloat(volumeName, value);
+        volumeSlider.slider.value = value; 
     }
     
     public void SetFullscreen(bool isFullscreen)
