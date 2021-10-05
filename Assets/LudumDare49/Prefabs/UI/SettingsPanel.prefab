@@ -1072,6 +1072,7 @@ MonoBehaviour:
   - volumeName: Volume_Music
     slider: {fileID: 6077836716995466380}
     mixerGroup: {fileID: 3465702205482160740, guid: c2690e4dc674f91448a02377ccec47f9, type: 2}
+  _fullscreenToggle: {fileID: 7961147455061750050}
 --- !u!225 &1242748940112903228
 CanvasGroup:
   m_ObjectHideFlags: 0

@@ -16,7 +16,10 @@ public struct VolumeSliderEntry
 
 public class Options : MonoBehaviour
 {
-    [BoxGroup("Properties"), SerializeField] private List<VolumeSliderEntry> _volumeSliders;
+    private readonly string KEY_FULLSCREEN = "Fullscreen";
+    
+    [BoxGroup("Components"), SerializeField] private List<VolumeSliderEntry> _volumeSliders;
+    [BoxGroup("Components"), SerializeField] private Toggle _fullscreenToggle;
 
     private void Start()
     {
@@ -24,6 +27,7 @@ public class Options : MonoBehaviour
         {
             UpdateSlider(entry);
         }
+        UpdateFullscreenToggle();
     }
     
     public void SetVolume(string volumeName, float value)
@@ -40,11 +44,18 @@ public class Options : MonoBehaviour
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        PlayerPrefs.SetInt(KEY_FULLSCREEN, isFullscreen ? 1 : 0);
     }
 
     private void UpdateSlider(VolumeSliderEntry entry)
     {
         float value = PlayerPrefs.GetFloat(entry.volumeName, 0.5f);
         entry.slider.value = value;
+    }
+
+    private void UpdateFullscreenToggle()
+    {
+        int value = PlayerPrefs.GetInt(KEY_FULLSCREEN);
+        _fullscreenToggle.isOn = value == 1;
     }
 }
