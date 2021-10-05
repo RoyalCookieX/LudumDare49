@@ -11,6 +11,8 @@ public class MusicAudioSource : MonoBehaviour
 
     [BoxGroup("Properties"), SerializeField] private AudioEntry[] _musicClips;
 
+    private string _currentSceneName;
+
     private void Start()
     {
         if (CurrentID == -1)
@@ -26,17 +28,18 @@ public class MusicAudioSource : MonoBehaviour
 
     private void OnEnable()
     {
-        SceneManager.activeSceneChanged += OnSceneLoaded;
+        SceneManager.activeSceneChanged += OnSceneChanged;
     }
 
     private void OnDisable()
     {
-        SceneManager.activeSceneChanged -= OnSceneLoaded;
+        SceneManager.activeSceneChanged -= OnSceneChanged;
     }
 
-    private void OnSceneLoaded(Scene arg0, Scene arg1)
+    private void OnSceneChanged(Scene arg0, Scene arg1)
     {
-        if(arg0.buildIndex == arg1.buildIndex) return;
+        if(arg1.name == _currentSceneName) return;
+        _currentSceneName = arg1.name;
 
         AudioEntry entry = _musicClips[arg1.buildIndex];
         _audioSource.Stop();
