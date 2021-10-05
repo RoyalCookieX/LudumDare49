@@ -42,7 +42,7 @@ MonoBehaviour:
           m_StringArgument: Possess
           m_BoolArgument: 0
         m_CallState: 2
-  _releaseOffset: 6
+  _releaseOffset: 3
 --- !u!1001 &7777311410463390338
 PrefabInstance:
   m_ObjectHideFlags: 0

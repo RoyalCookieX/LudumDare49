@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0fbce93be5b7464a8513e6a72823f3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attractRadius: 200
+  _attractRadius: 500
   _attractionMultiplier: 15
   _maxRigidbodies: 50
   _attractorMask:
